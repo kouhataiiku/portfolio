@@ -1,11 +1,12 @@
 /* 基本スタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 20px;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
+
 
 /* 見出し */
 h1, h2, h3 {
@@ -46,7 +47,62 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ffdd57;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* ハンバーガーメニューボタン */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* モバイル表示でのナビゲーションメニュー */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+
+
 
 /* セクション */
 section {
@@ -66,6 +122,11 @@ section {
     padding: 20px;
     background-color: #e0e0e0;
     border-radius: 8px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.05);
 }
 
 .project img {
