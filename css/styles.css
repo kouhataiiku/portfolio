@@ -69,6 +69,11 @@ nav ul li a:hover {
 
 /* モバイル表示でのナビゲーションメニュー */
 @media (max-width: 768px) {
+    nav {
+        background-color: #333;
+        padding: 0px;
+    }
+
     .menu-icon {
         display: flex;
         margin-left: auto;
@@ -125,9 +130,6 @@ section {
     transition: transform 0.1s ease-in-out;
 }
 
-.project:hover {
-    transform: scale(1.05);
-}
 
 .project img {
     max-width: 100%;
@@ -217,17 +219,17 @@ footer ul li a:hover {
         font-size: 16px;
         line-height: 1.5;
     }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
+    
     .project {
         padding: 15px;
     }
 
     #contact {
         padding: 20px;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 0px;
     }
 }
