@@ -24,6 +24,14 @@ nav {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    nav ul {
+    display: none;
+}
+
+
+nav ul.active {
+    display: flex; /* or block */
+}
 }
 
 nav ul {
